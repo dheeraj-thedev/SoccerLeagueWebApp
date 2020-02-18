@@ -12,10 +12,7 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Bootstrap CSS -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-	crossorigin="anonymous">
+<jsp:include page="/include/designhead.jsp"></jsp:include>
 
 <title>Insert title here</title>
 </head>
@@ -32,21 +29,20 @@
 	<p>This is for adding a new League.</p>
 
 	<form action="/addleague" method="post">
-		<label>Name: </label><input text="text" name="title"><br>
-		<label>Season : </label> <select name="season">
+		<label for="title" class="col-sm-1">Title  : </label><input class="btn-outline-primary type="text" name="title" placeholder="League Title"><br>
+		<label for="title" class="col-sm-1">Season : </label><select class="btn-outline-primary name="season">
 			
 			<c:forEach items="${seasons}" var="season">
 				<option>${season}</option>
 			</c:forEach>
 			 
-		</select><br> <label>Year : </label><input type="text" name="year">
-		<input type="submit">
+		</select><br> <label for="title" class="col-sm-1">Year : </label><input class="btn-outline-primary type="text" name="year"><br>
+		<label class="col-sm-1"> </label><input type="submit">
 	</form>
 
 	<span style="color: green"><c:out value="${msg}"></c:out></span>
 	<div style="color: red">
 		<ol>
-			`
 			<c:forEach items="${errMsg}" var="errMsg">
 				<li>${errMsg}</li>
 			</c:forEach>
@@ -69,24 +65,14 @@
 		}
 	%> --%>
 	<ul>
-		<li><a href='/listleague'>List all leagues</a></li>
-		<li>Register for a league (TBA)</li>
+		<button><a href='/listleague'>List all leagues</a></button>
+		<button><a href='/listleague'>Register for league</a></button>
 	</ul>
 	
 	
 	<div class="bg-primary">
 		<jsp:include page="/include/footer.jsp"></jsp:include>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-		crossorigin="anonymous"></script>
+	<jsp:include page="/include/designbody.jsp"></jsp:include>
 </body>
 </html>

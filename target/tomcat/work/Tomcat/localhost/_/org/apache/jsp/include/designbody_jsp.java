@@ -12,7 +12,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class slider_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class designbody_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final javax.servlet.jsp.JspFactory _jspxFactory =
@@ -59,32 +59,17 @@ public final class slider_jsp extends org.apache.jasper.runtime.HttpJspBase
       out = pageContext.getOut();
       _jspx_out = out;
 
-      out.write("<div id=\"carouselExampleIndicators\" class=\"carousel slide\" data-ride=\"carousel\">\n");
-      out.write("  <ol class=\"carousel-indicators\">\n");
-      out.write("    <li data-target=\"/images\" data-slide-to=\"1.jpg\" class=\"active\"></li>\n");
-      out.write("    <li data-target=\"/images\" data-slide-to=\"2.jpg\"></li>\n");
-      out.write("    <li data-target=\"/images\" data-slide-to=\"3.jpg\"></li>\n");
-      out.write("  </ol>\n");
-      out.write("  <div class=\"carousel-inner\">\n");
-      out.write("    <div class=\"carousel-item active\" style=\"text-align:center\">\n");
-      out.write("      <img class=\"d-block w-100\" src=\"/images/1.jpg\" alt=\"First slide\">\n");
-      out.write("    </div>\n");
-      out.write("    <div class=\"carousel-item\">\n");
-      out.write("      <img class=\"d-block w-100\" src=\"/images/2.jpg\" alt=\"Second slide\">\n");
-      out.write("    </div>\n");
-      out.write("    <div class=\"carousel-item\">\n");
-      out.write("      <img class=\"d-block w-100\" src=\"/images/3.jpg\" alt=\"Third slide\">\n");
-      out.write("    </div>\n");
-      out.write("  </div>\n");
-      out.write("  <a class=\"carousel-control-prev\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"prev\">\n");
-      out.write("    <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n");
-      out.write("    <span class=\"sr-only\">Previous</span>\n");
-      out.write("  </a>\n");
-      out.write("  <a class=\"carousel-control-next\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"next\">\n");
-      out.write("    <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n");
-      out.write("    <span class=\"sr-only\">Next</span>\n");
-      out.write("  </a>\n");
-      out.write("</div> ");
+      out.write("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\"\r\n");
+      out.write("\tintegrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\"\r\n");
+      out.write("\tcrossorigin=\"anonymous\"></script>\r\n");
+      out.write("<script\r\n");
+      out.write("\tsrc=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\"\r\n");
+      out.write("\tintegrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\"\r\n");
+      out.write("\tcrossorigin=\"anonymous\"></script>\r\n");
+      out.write("<script\r\n");
+      out.write("\tsrc=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\"\r\n");
+      out.write("\tintegrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\"\r\n");
+      out.write("\tcrossorigin=\"anonymous\"></script>");
     } catch (java.lang.Throwable t) {
       if (!(t instanceof javax.servlet.jsp.SkipPageException)){
         out = _jspx_out;
