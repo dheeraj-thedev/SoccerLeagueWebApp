@@ -30,14 +30,7 @@
 		<div id="result">
 			<h3>${requestScope["message"]}</h3>
 		</div>
-
-
-
-
-
-
 		<div id="payslip">
-
 			<c:forEach items="${employees}" var="employee">
 				<div class="card text-left col-md-6 m-auto">
 					<h3 class="card-header">ID : ${employee.getEmpId()} | Name :
@@ -51,9 +44,10 @@
 						<h3>Gross : ${employee.getBasicSalary() + employee.getAllowances()}</h3>
 						<h3>Insurance Deduction : ${employee.getInsDed()}</h3>
 						<h3>Tax Deduction : ${employee.getTaxDed()}</h3>
-						<h3>Total Deduction :${employee.getInsDed()+employee.getTaxDed()}</h3>
-							<h2>Net Salary :${employee.getBasicSalary() + employee.getAllowances()- employee.getInsDed()- employee.getTaxDed()}</h2>
-<%-- 						<h2>Net Salary :${(employee.getBasicSalary() }+
+						<h3>Total Deduction
+							:${employee.getInsDed()+employee.getTaxDed()}</h3>
+						<h2>Net Salary :${employee.getBasicSalary() + employee.getAllowances()- employee.getInsDed()- employee.getTaxDed()}</h2>
+						<%-- 						<h2>Net Salary :${(employee.getBasicSalary() }+
 							${employee.getAllowances()}) -(${employee.getInsDed()} +
 							${employee.getTaxDed()})</h2> --%>
 						</p>

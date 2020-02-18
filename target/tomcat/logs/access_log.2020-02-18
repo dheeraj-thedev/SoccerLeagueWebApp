@@ -1,0 +1,11 @@
+0:0:0:0:0:0:0:1 - - [18/Feb/2020:12:35:14 +0530] "GET / HTTP/1.1" 200 6035 http-bio-8080-exec-1 291
+0:0:0:0:0:0:0:1 - - [18/Feb/2020:12:35:14 +0530] "GET /include/slider.css HTTP/1.1" 200 2012 http-bio-8080-exec-3 63
+0:0:0:0:0:0:0:1 - - [18/Feb/2020:12:35:14 +0530] "GET /images/2.jpg HTTP/1.1" 200 78840 http-bio-8080-exec-4 55
+0:0:0:0:0:0:0:1 - - [18/Feb/2020:12:35:14 +0530] "GET /images/1.jpg HTTP/1.1" 200 90028 http-bio-8080-exec-2 93
+0:0:0:0:0:0:0:1 - - [18/Feb/2020:12:35:14 +0530] "GET /images/3.jpg HTTP/1.1" 200 14468 http-bio-8080-exec-7 12
+0:0:0:0:0:0:0:1 - - [18/Feb/2020:12:35:14 +0530] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-8 2
+0:0:0:0:0:0:0:1 - - [18/Feb/2020:12:35:17 +0530] "GET / HTTP/1.1" 200 6035 http-bio-8080-exec-9 8
+0:0:0:0:0:0:0:1 - - [18/Feb/2020:12:35:20 +0530] "GET /views/listleague.jsp HTTP/1.1" 200 4275 http-bio-8080-exec-10 1316
+0:0:0:0:0:0:0:1 - - [18/Feb/2020:12:35:22 +0530] "GET /views/addleague.jsp HTTP/1.1" 200 4671 http-bio-8080-exec-1 210
+0:0:0:0:0:0:0:1 - - [18/Feb/2020:12:35:24 +0530] "GET /views/genpayslips.jsp HTTP/1.1" 200 4282 http-bio-8080-exec-1 69
+0:0:0:0:0:0:0:1 - - [18/Feb/2020:12:35:45 +0530] "POST /processFile HTTP/1.1" 200 10325 http-bio-8080-exec-1 11390
