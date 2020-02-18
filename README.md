@@ -1,5 +1,6 @@
 # SoccerLeagueWebApp : We Application to manage various Corporate Leagues and Matches
 
+https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project
 
 ## What we are trying to create ?
 
