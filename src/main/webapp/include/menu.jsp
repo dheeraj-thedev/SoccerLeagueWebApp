@@ -10,8 +10,8 @@
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item"><a class="nav-link" href="/">Home <span
 					class="sr-only">(current)</span></a></li>
-			<li class="nav-item dropdown"><a
-				class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+			<li class="nav-item dropdown ">
+			<a	class=" btn btn-outline-light dropdown-toggle " data-toggle="dropdown" href="#"
 				role="button" aria-haspopup="true" aria-expanded="false"> Player</a>
 				<div class="dropdown-menu">
 					<a class="dropdown-item" href="/views/listleague.jsp">List
@@ -19,17 +19,16 @@
 						For League</a>
 				</div></li>
 			<li class="nav-item dropdown"><a
-				class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+				class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown" href="#"
 				role="button" aria-haspopup="true" aria-expanded="false"> League
 					Admin</a>
 				<div class="dropdown-menu">
 					<a class="dropdown-item" href="/views/listleague.jsp">List
 						Leagues</a> <a class="dropdown-item" href="/views/addleague.jsp">Add
-						League</a> <a class="dropdown-item" href="#">List Leagues</a> <a
-						class="dropdown-item" href="#">Add League</a>
+						League</a>
 				</div></li>
 			<li class="nav-item dropdown"><a
-				class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+				class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown" href="#"
 				role="button" aria-haspopup="true" aria-expanded="false">Utilities</a>
 				<div class="dropdown-menu">
 					<a class="dropdown-item" href="/views/genpayslips.jsp">Generate Pay Slips</a>
