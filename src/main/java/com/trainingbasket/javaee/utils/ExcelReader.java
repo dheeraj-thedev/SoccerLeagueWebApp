@@ -14,7 +14,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import com.trainingbasket.javaee.modal.Employee;
+import com.trainingbasket.javaee.model.Employee;
 
 public class ExcelReader {
 	public static List<Employee> getEmployeeFromExl(String path) throws IOException {

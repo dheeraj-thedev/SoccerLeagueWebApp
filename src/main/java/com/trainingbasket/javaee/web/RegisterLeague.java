@@ -4,6 +4,7 @@ import java.awt.geom.GeneralPath;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -12,9 +13,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.trainingbasket.javaee.modal.LeagueModal;
-import com.trainingbasket.javaee.modal.MyDate;
-import com.trainingbasket.javaee.modal.Player;
+import com.trainingbasket.javaee.model.League;
+import com.trainingbasket.javaee.model.MyDate;
+import com.trainingbasket.javaee.model.Player;
 
 /**
  * Servlet implementation class RegisterLeague
@@ -37,7 +38,7 @@ public class RegisterLeague extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/views/registerleague.jsp");
-		List<LeagueModal> leagues = (List<LeagueModal>) getServletContext().getAttribute("leagues");
+		List<League> leagues = (List<League>) getServletContext().getAttribute("leagues");
 		dispatcher.forward(request, response);
 	}
 
@@ -59,15 +60,15 @@ public class RegisterLeague extends HttpServlet {
 		String female = request.getParameter("female");
 		validateData(dob, contact, address, name, email, league);
 		Player player = new Player();
-		MyDate dateOB = new MyDate();
+		Date dateOB = new Date();
 		String dobdash[] = dob.split("-");
 		String dobslash[] = dob.split("/");
 		if (dobdash.length == 3) {
-			dateOB.setDay(Integer.parseInt(dobdash[0]));
+			dateOB.setDate(Integer.parseInt(dobdash[0]));
 			dateOB.setMonth(Integer.parseInt(dobdash[1]));
 			dateOB.setYear(Integer.parseInt(dobdash[2]));
 		} else if (dobslash.length == 3) {
-			dateOB.setDay(Integer.parseInt(dobslash[0]));
+			dateOB.setDate(Integer.parseInt(dobslash[0]));
 			dateOB.setMonth(Integer.parseInt(dobslash[1]));
 			dateOB.setYear(Integer.parseInt(dobslash[2]));
 		}
@@ -76,12 +77,12 @@ public class RegisterLeague extends HttpServlet {
 		String leaguesfromui[]= league.split("-");
 		System.out.println(leaguesfromui.length);
 		//Arrays.asList(leaguesfromui).forEach(System.err::println);
-		LeagueModal leagueModal =  new LeagueModal();
-		leagueModal.setId(Integer.parseInt( leaguesfromui[0].trim()));
-		leagueModal.setTitle(leaguesfromui[1].trim());
-		leagueModal.setSeason(leaguesfromui[2].trim());
+		League league1 =  new League();
+		league1.setId(Integer.parseInt( leaguesfromui[0].trim()));
+		league1.setTitle(leaguesfromui[1].trim());
+		league1.setSeason(leaguesfromui[2].trim());
 		//System.out.println(leaguesfromui[3].trim());
-		leagueModal.setYear(Integer.parseInt( leaguesfromui[3].trim()));
+		league1.setYear(Integer.parseInt( leaguesfromui[3].trim()));
 		
 		if (male!=null) {
 			player.setGender("male");
@@ -96,7 +97,7 @@ public class RegisterLeague extends HttpServlet {
 			player.setAddress(address);
 			player.setContactNumber(contact);
 			player.setName(name);
-			player.setLeague(leagueModal);
+			player.setLeague(league1);
 			player.setEmail(email);	
 		}
 		

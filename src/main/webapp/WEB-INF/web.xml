@@ -9,7 +9,9 @@
 	<servlet>
 		<description>
 		</description>
-		<display-name>RegisterLeague</display-name>
+		<display-name>
+		RegisterLeague
+	</display-name>
 		<servlet-name>RegisterLeague</servlet-name>
 		<servlet-class>com.trainingbasket.javaee.web.RegisterLeague</servlet-class>
 	</servlet>
@@ -28,6 +30,7 @@
 		<servlet-name>ProcessFile</servlet-name>
 		<url-pattern>/processFile</url-pattern>
 	</servlet-mapping>
+	
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>

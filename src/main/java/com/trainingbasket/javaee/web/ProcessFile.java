@@ -14,7 +14,7 @@ import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
-import com.trainingbasket.javaee.modal.Employee;
+import com.trainingbasket.javaee.model.Employee;
 import com.trainingbasket.javaee.utils.ExcelReader;
 
 /**

@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.trainingbasket.javaee.modal.LeagueModal;
+import com.trainingbasket.javaee.model.League;
 
 /**
  * Servlet implementation class AddLeague
@@ -53,10 +53,10 @@ public class AddLeague extends HttpServlet {
 		}
 		RequestDispatcher dispatcher = null;
 		if (errMsg.isEmpty()) {
-			LeagueModal league = new LeagueModal();
-			List<LeagueModal> leagues = (List<LeagueModal>) getServletContext().getAttribute("leagues");
+			League league = new League();
+			List<League> leagues = (List<League>) getServletContext().getAttribute("leagues");
 			if (leagues == null) {
-				leagues = new ArrayList<LeagueModal>();
+				leagues = new ArrayList<League>();
 				league.setSeason(season);
 				league.setTitle(title);
 				league.setYear(year);
