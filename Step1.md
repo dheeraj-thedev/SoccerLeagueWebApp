@@ -83,9 +83,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "student")
-public class Student {
+    @Entity
+    @Table(name = "student")
+    public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
