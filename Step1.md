@@ -1,4 +1,4 @@
-#The following steps are used to create simple hibernate applications:
+# The following steps are used to create simple hibernate applications:
 
 1. Identify the POJOs/Models that have a database table representation.
 2. Identify which properties of those POJOs need to be persisted or saved.
@@ -10,8 +10,7 @@
 8. Also in your Java application, build a Hibernate SessionFactory object from the Configuration object.
 9. Retrieve the Hibernate Session objects from the SessionFactory, and write your data access logic for your application (create, retrieve, update, and delete).
 
-
-# Technologies and tools used
+## Technologies and tools used
 	Hibernate 5.3.7.Final
 	IDE - Eclipse Noen
 	Maven 3.5.3
@@ -19,7 +18,7 @@
 	MySQL - 8.0.13
 
 
-# POM .xml
+## POM .xml
 
 <project
     xmlns="http://maven.apache.org/POM/4.0.0"
@@ -66,10 +65,10 @@
 
 
 
-## A no-arg constructor: It is recommended that you have a default constructor at least package visibility so that hibernate can create the instance of the Persistent class by newInstance() method.
-## Provide an identifier property: It is better to assign an attribute as id. This attribute behaves as a primary key in a database.
-## Declare getter and setter methods: The Hibernate recognizes the method by getter and setter method names by default.
-## Prefer non-final class: Hibernate uses the concept of proxies, that depends on the persistent class. The application programmer will not be able to use proxies for lazy association fetching.
+### A no-arg constructor: It is recommended that you have a default constructor at least package visibility so that hibernate can create the instance of the Persistent class by newInstance() method.
+### Provide an identifier property: It is better to assign an attribute as id. This attribute behaves as a primary key in a database.
+### Declare getter and setter methods: The Hibernate recognizes the method by getter and setter method names by default.
+### Prefer non-final class: Hibernate uses the concept of proxies, that depends on the persistent class. The application programmer will not be able to use proxies for lazy association fetching.
 
 
 # Create a Student Persitant Class
