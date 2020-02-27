@@ -152,49 +152,49 @@
 
 ## Create Hibernate Configuration XML
 
-<!DOCTYPE hibernate-configuration PUBLIC
-        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
-        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
-<hibernate-configuration>
-    <session-factory>
-        <!-- JDBC Database connection settings -->
-        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://localhost:3306/hibernate_db?useSSL=false</property>
-        <property name="connection.username">root</property>
-        <property name="connection.password">root</property>
-        <!-- JDBC connection pool settings ... using built-in test pool -->
-        <property name="connection.pool_size">1</property>
-        <!-- Select our SQL dialect -->
-        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
-        <!-- Echo the SQL to stdout -->
-        <property name="show_sql">true</property>
-        <!-- Set the current session context -->
-        <property name="current_session_context_class">thread</property>
-        <!-- Drop and re-create the database schema on startup -->
-        <property name="hbm2ddl.auto">create-drop</property>
-        <!-- dbcp connection pool configuration -->
-        <property name="hibernate.dbcp.initialSize">5</property>
-        <property name="hibernate.dbcp.maxTotal">20</property>
-        <property name="hibernate.dbcp.maxIdle">10</property>
-        <property name="hibernate.dbcp.minIdle">5</property>
-        <property name="hibernate.dbcp.maxWaitMillis">-1</property>
-        <mapping class="com.trainingbasket.hibernate.entity.Student" />
-    </session-factory>
+	<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	<hibernate-configuration>
+	    <session-factory>
+		<!-- JDBC Database connection settings -->
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/hibernate_db?useSSL=false</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+		<!-- JDBC connection pool settings ... using built-in test pool -->
+		<property name="connection.pool_size">1</property>
+		<!-- Select our SQL dialect -->
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<!-- Echo the SQL to stdout -->
+		<property name="show_sql">true</property>
+		<!-- Set the current session context -->
+		<property name="current_session_context_class">thread</property>
+		<!-- Drop and re-create the database schema on startup -->
+		<property name="hbm2ddl.auto">create-drop</property>
+		<!-- dbcp connection pool configuration -->
+		<property name="hibernate.dbcp.initialSize">5</property>
+		<property name="hibernate.dbcp.maxTotal">20</property>
+		<property name="hibernate.dbcp.maxIdle">10</property>
+		<property name="hibernate.dbcp.minIdle">5</property>
+		<property name="hibernate.dbcp.maxWaitMillis">-1</property>
+		<mapping class="com.trainingbasket.hibernate.entity.Student" />
+	    </session-factory>
 
-</hibernate-configuration>
+	</hibernate-configuration>
 
 
 # Create a Hibernate utility Class to make hibernate in action in your Util Package
 
 
 
-import org.hibernate.SessionFactory;
-import org.hibernate.boot.Metadata;
-import org.hibernate.boot.MetadataSources;
-import org.hibernate.boot.registry.StandardServiceRegistry;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+    import org.hibernate.SessionFactory;
+    import org.hibernate.boot.Metadata;
+    import org.hibernate.boot.MetadataSources;
+    import org.hibernate.boot.registry.StandardServiceRegistry;
+    import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
-public class HibernateUtil {
+    public class HibernateUtil {
     private static StandardServiceRegistry registry;
     private static SessionFactory sessionFactory;
 
