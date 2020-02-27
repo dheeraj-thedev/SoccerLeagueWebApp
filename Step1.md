@@ -74,7 +74,7 @@
 # Create a Student Persitant Class
 
 
-package com.trainingbasket.entity;
+package com.trainingbasket.hibernate.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
